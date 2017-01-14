@@ -1,0 +1,110 @@
+<h1>Git basic use</h1>
+
+<h2>Basic process</h2>
+<pre>
+1: create server save files = git project (github,bitbucket...)
+2: download git project to computer
+3: edit,add,delete files
+4: update files from git project (need update before upload)
+5: upload files to server git project
+</pre>
+
+<h2>Language by git</h2>
+<pre>
+1: go to (github,bitbucket...) login create project
+2: git clone
+3: notepad edit file, or add file, delete file in fordel clone
+4: git pull
+5: git push (need git add, git commit)
+</pre>
+
+
+
+<h2>Basic git</h2>
+<pre>
+- git clone (download project of git to computer)
+- git pull: (after clone/exit source have .git folder) load new download project of git to computer (file change)
+- git push (after status,add,commit) upload file of computer to online project git
+  - - need provide: account
+- git status: view file in computer change when have git clone/pull (can old version of git)
+- git add: add file/files change to git server
+- git commit: add comment and ready push to server
+<pre>
+
+
+<h2>Example</h2>
+<pre>
+Chayu@Chayu-PC MINGW64 /g/xampp/htdocs
+$ <b>git clone https://github.com/tranquangchau/document-techc.git</b>
+Cloning into 'document-techc'...
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+
+Chayu@Chayu-PC MINGW64 /g/xampp/htdocs
+$ cd document-techc/
+
+Chayu@Chayu-PC MINGW64 /g/xampp/htdocs/document-techc (master)
+$ <b>git status</b>
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Chayu@Chayu-PC MINGW64 /g/xampp/htdocs/document-techc (master)
+$ <b>git add index.html</b>
+
+Chayu@Chayu-PC MINGW64 /g/xampp/htdocs/document-techc (master)
+$ <b>git commit -a -m "f"</b>
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <(null)>) not allowed
+
+Chayu@Chayu-PC MINGW64 /g/xampp/htdocs/document-techc (master)
+$ git config --global user.email "tranquangchau155@gmail.com"
+
+Chayu@Chayu-PC MINGW64 /g/xampp/htdocs/document-techc (master)
+$ git config --global user.name "tranquangchau"
+
+Chayu@Chayu-PC MINGW64 /g/xampp/htdocs/document-techc (master)
+$ <b>git commit -a -m "c"</b>
+[master 1c90603] c
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.html
+
+Chayu@Chayu-PC MINGW64 /g/xampp/htdocs/document-techc (master)
+$ <b>git push</b>
+Username for 'https://github.com': tranquangchau155@gmail.com
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 301 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/tranquangchau/document-techc.git
+   dc6f1f1..1c90603  master -> master
+
+Chayu@Chayu-PC MINGW64 /g/xampp/htdocs/document-techc (master)
+$
+</pre>
+
+<a href=".">Backhome</a>
+
+
+<style>
+a{ border: 1px solid; padding: 10px; }
+pre b{color:red;}
+</style>
